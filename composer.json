@@ -1,0 +1,13 @@
+{
+  "name": "jhnferraris/Sharepoint.php",
+  "description": "Microsoft Sharepoint",
+  "keywords": [
+    "Microsoft Sharepoint"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-0": {
+      "": "/"
+    }
+  }
+}
