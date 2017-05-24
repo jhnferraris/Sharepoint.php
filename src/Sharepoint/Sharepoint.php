@@ -115,7 +115,7 @@ class Sharepoint
                 $this->tmpWsdlFiles[$section] = tempnam($this->tmpDir, 'ShareSoap_' . $section . '_');
                 file_put_contents($this->tmpWsdlFiles[$section], $this->getWsdl($section));
             }
-            $this->soapClients[$section] = new Sharepoint\SoapClient($this->getConnection(), $this->tmpWsdlFiles[$section]);
+            $this->soapClients[$section] = new \Sharepoint\SoapClient($this->getConnection(), $this->tmpWsdlFiles[$section]);
         }
 
         return $this->soapClients[$section];

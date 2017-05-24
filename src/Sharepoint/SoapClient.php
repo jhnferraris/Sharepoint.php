@@ -27,7 +27,7 @@ class SoapClient extends \SoapClient
         parent::__construct($wsdl, $settings);
     }
 
-    public function __doRequest($request, $location, $action, $version)
+    public function __doRequest($request, $location, $action, $version, $one_way = 0)
     {
         //Bugfix: at some point inside the SoapClient the $location has been urldecoded, special chars (like ä, ö) need to be encoded
         $location = urldecode($location); //In case some versions of php work differently...
