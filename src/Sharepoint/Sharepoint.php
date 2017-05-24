@@ -67,10 +67,10 @@ class Sharepoint
                 if (strtolower($urlParts['scheme']) == 'https') {
                     $port = 443;
                 } else {
-                    throw new Sharepoint\Exception("Unknown protocol '{$urlParts['scheme']}'");
+                    throw new \Sharepoint\Exception("Unknown protocol '{$urlParts['scheme']}'");
                 }
             }
-            $this->conn = new Sharepoint\Connection($urlParts['host'], $this->user, $this->pass, $port);
+            $this->conn = new \Sharepoint\Connection($urlParts['host'], $this->user, $this->pass, $port);
         }
         $this->conn->debug = $this->debug;
 
